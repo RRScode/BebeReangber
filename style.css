@@ -1,40 +1,125 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Mate+SC&display=swap');
-
-
-:root{
-    --grey:#404040;
-}
-
-body{
-    margin:0;
-    padding:0;
-}
-
-header{
-    width:100%;
-    height: 100vh;
-    margin:0;
-
-    background-color: var(--grey);
-    font-family: 'Mate SC';
-    color:white;
+  
+  
+  :root{
+      --grey:#404040;
+      --gold:#58480F;
+    }
     
-    display:flex;
-    Flex-direction:column;
-    justify-content: center;
+    body{
+        margin:0;
+        padding:0;
+        
+    }
+    
+    header{
+        max-width:100%;
+        background-color: var(--gold);
+    }
+    
+    #header1{ 
+        max-width:100%;
+        height:700px;
+        
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        
+        background-image: url("./assets/profile1.png");
+        background-position:right top;
+        background-repeat: no-repeat;
+        background-size: 700px;
+    }
+    
+    #header1 h1{
+        width:50%;
+        color:white;
+        font-size: 4vw;
+        text-align: center;
+    }
+    
+    
+    @media screen and ( max-width: 900px){
+        #header1{
+            height:600px;
+            justify-content:center;
+            align-items: flex-end;
+            background-position: center top;
+            background-size: 600px;
+        }
+        
+        #header1 h1{
+            width:100%;
+            padding:0;
+            font-size:8vw;
+            
+        }
+    }
+    @media screen and (max-width:400px){
+        #header1 {
+        height:400px;
+        background-size: 400px;
+        }
+        #header1 h1{
+            font-size:2em;
+        }
 }
 
-#header1{
-    display:flex;
-    justify-content: center;
-}
-#header1 img{
-    max-height: 90vh;;
+
+.sectionContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+
+    
+    background-image: url("./assets/aboutBG.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    
+    background-size: cover;
 }
 
-#header2{
+.sectionWrapper{
+    max-width:1000px;
+    margin:auto;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.sectionButton{
     display:flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    padding:2.5%;
+    
+}
+
+.sectionContent{
+    display:flex;
+    justify-content: flex-end;
+}
+#about{
+    width:45%;
+    padding:5%;
+    padding-top:0;
+    text-align: justify;
+    color:white;
+    background-color: rgba(0,0,0, .3);
+}
+
+
+@media screen and (max-width:850px){
+    .sectionContainer{
+        background-image: none;
+    }
+    .sectionWrapper{
+        background-color: var(--grey);
+    }
+
+    #about{
+        width:75%;
+        margin:auto;
+    }
+
 }

@@ -78,48 +78,58 @@
     background-color:black;
     color:white;
     border-top:solid 3px;
-    border-bottom:solid 3px;
     border-color: white;
 
     cursor: pointer;
 }
 
-    .sectionWrapper{
+    .sectionBackground{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         width:100%;
-        
+        border-top:solid 3px;
+        border-color: white;
+
+        padding-bottom:200px;
+
         
         background-image: url("./assets/aboutBG.jpg");
         background-repeat: no-repeat;
         background-position: left top;
-        
         background-size: cover;
     }
     
+    .inactive{
+        display:none;
+        animation-name: open;
+        animation-duration: 1s;
+    }
+
+    .active{
+        display:flex;
+        
+    }
+
     .sectionContainer{
         max-width:1000px;
-        margin:auto;
+        width:100%;
         display: flex;
-        justify-content: flex-end;
-        flex-direction: column;
+        justify-content:center;
     }
     
-    .sectionButton{
-        display:flex;
-        justify-content: flex-end;
-    padding:2.5%;
-    
-}
 
 .sectionContent{
     display:flex;
     justify-content: flex-end;
+    width:100%;
+    padding:5%;
 }
 
-
+/* -------------Section Specific----------------- */
+/* -----about---------- */
 #about{
-    width:45%;
+    width:60%;
     padding:5%;
     padding-top:0;
     text-align: justify;
@@ -128,19 +138,50 @@
 }
 
 
+/* -------Reel -------- */
+#reel{
+   width:100%;
+}   
+
+.yt{
+    aspect-ratio: 16/9;
+    width:100%
+}
+
+/* -------contact----------- */
+#contact{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    padding-top:0;
+    color:white;
+    background-color: rgba(0,0,0, .5);
+}
+
+.info{
+    width: 40%;
+    padding-left:20px;
+    padding-right:10px;
+}
+
+
+
 @media screen and (max-width:850px){
-    .sectionWrapper{
+    .sectionBackground{
         background-image: none;
+        background-color: var(--grey);
     }
     
     .sectionContainer{
         background-color: var(--grey);
     }
-
+    
     #about{
         width:75%;
         margin:auto;
         background-color:transparent;
     }
+    
 
 }
